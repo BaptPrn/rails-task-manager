@@ -1,0 +1,26 @@
+<h1>Tasks#edit</h1>
+<p>Find me in app/views/tasks/edit.html.erb</p>
+<!--
+<form action="/tasks/<%= @task.id %>" method="post">
+  <%= hidden_field_tag :_method, 'put'%>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  <label for="name">Name: </label>
+  <input type="text" name="task[name]" id="name" placeholder="Task name" value="<%= @task.name %>">
+  <label for="description">Description: </label>
+  <input type="text" name="task[description]" id="description" placeholder="Task description" value="<%= @task.description %>">
+  <label for="deadline">Deadline: </label>
+  <input type="date" name="task[deadline]" id="deadline" placeholder="Task deadline" value="<%= @task.deadline %>">
+    <label for="done">Status (done): </label>
+  <input type="checkbox" name="task[done]" id="done" placeholder="Task status" value="<%= @task.done %>">
+  <input type="submit">
+</form>
+ -->
+
+ <%= render 'form' %>
+<button type="button" class="btn btn-primary"><%= link_to('Delete task', task_path(@task), method: :delete) %> </button>
+
+<!--
+<label for="name">Name: </label>
+<input type="text" name="restaurant[name]" id="name"
+       value="La Tour d'Argent"> -->

@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# TODO: Write a seed to insert 100 posts in the database
+
+10.times do
+  task = Task.new(
+    name: Faker::Name.title,
+    description: Faker::Lorem.sentence,
+    deadline: Faker::Date.forward(14)
+  )
+  task.save!
+end
